@@ -1858,10 +1858,10 @@ def update_member(member): #on status change
 	if member not in allowoffline:
 		if str(member.status) == 'offline':
 			global_remove(member, 'offline')
-		elif str(member.status) == 'idle':
+		#elif str(member.status) == 'idle':
 			#dont remove if user have expire time set!
-			if member.id not in scheduler.tasks.keys():
-				global_remove(member, 'idle')
+			#if member.id not in scheduler.tasks.keys():
+				#global_remove(member, 'idle')
 
 def global_remove(member, reason):
 	#removes player from pickups on all channels
